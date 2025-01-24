@@ -1,5 +1,4 @@
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent default form submission
-    alert("Your message has been sent successfully!");
-    // You can integrate with a backend or email service here to handle form submissions
+// Example for interactivity if needed later
+document.querySelector('form').addEventListener('submit', function(event) {
+    alert('Your request has been submitted!');
 });
