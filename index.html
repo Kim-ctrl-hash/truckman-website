@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TruckMan - Emergency Roadside Assistance</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="TruckMan Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Fast & Reliable Roadside Assistance</h1>
+        <p>Providing 24/7 emergency services to get you back on the road.</p>
+        <a href="#contact" class="cta-btn">Request Assistance</a>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <h3>Flat Tire Service</h3>
+            <p>We can quickly change your flat tire so you can continue your journey.</p>
+        </div>
+        <div class="service">
+            <h3>Fuel Delivery</h3>
+            <p>Out of fuel? We’ll bring you enough to get you to the nearest station.</p>
+        </div>
+        <div class="service">
+            <h3>Battery Jumpstart</h3>
+            <p>We'll get your truck started with a quick battery jumpstart.</p>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>What Our Customers Say</h2>
+        <blockquote>
+            "TruckMan got me back on the road in no time. The service was fast and friendly!"
+            <footer>- John Doe</footer>
+        </blockquote>
+        <blockquote>
+            "Amazing service! Highly recommend TruckMan for all your roadside needs."
+            <footer>- Jane Smith</footer>
+        </blockquote>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit" class="cta-btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 TruckMan. All rights reserved.</p>
+    </footer>
+</body>
+</html>
