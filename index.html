@@ -3,69 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TruckMan - Roadside Assistance</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Emergency Roadside Assistance</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Header and Navigation -->
     <header>
-        <div class="logo">
-            <img src="logo.png" alt="TruckMan Logo">
-        </div>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <h1>Reliable Roadside Assistance When You Need It Most</h1>
-        <p>24/7 services to get you back on the road quickly</p>
-        <a href="#contact" class="cta-btn">Request Assistance</a>
+        <h1>24/7 Emergency Roadside Assistance</h1>
+        <p>We are here to help you with any roadside emergency. Call now or request help below!</p>
+        <a href="#request-form" class="cta-button">Request Assistance</a>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services">
+    <section id="services">
         <h2>Our Services</h2>
-        <div class="service-item">
-            <h3>Flat Tire Repair</h3>
-            <p>We offer fast and reliable flat tire repair services at your location.</p>
-        </div>
-        <div class="service-item">
-            <h3>Fuel Delivery</h3>
-            <p>Ran out of gas? We’ll deliver fuel to get you going.</p>
-        </div>
-        <div class="service-item">
-            <h3>Jump Start</h3>
-            <p>Our team can quickly jump-start your car and get you back on the road.</p>
-        </div>
+        <ul>
+            <li>Towing</li>
+            <li>Flat Tire Assistance</li>
+            <li>Fuel Delivery</li>
+            <li>Jumpstart</li>
+            <li>Lockout Services</li>
+        </ul>
     </section>
 
-    <!-- About Us Section -->
-    <section id="about" class="about">
-        <h2>About Us</h2>
-        <p>TruckMan is your trusted partner for roadside assistance. With years of experience, we are dedicated to providing fast, reliable service at competitive prices. Our team is available 24/7 to assist with emergencies wherever you are.</p>
-    </section>
-
-    <!-- Contact Form -->
-    <section id="contact" class="contact">
+    <!-- Contact Section with Real-Time Map -->
+    <section id="contact">
         <h2>Contact Us</h2>
-        <form id="contactForm" action="submit_form.php" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit" class="cta-btn">Send Message</button>
+        <p>Need immediate assistance? Call us at <strong>(555) 123-4567</strong></p>
+
+        <!-- Google Map Embed -->
+        <h3>Find Our Location</h3>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.7390952946984!2d90.39837831509661!3d23.81030059255596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8ff555a59a1%3A0x75c7b658c5c29d56!2sDhaka%20City%2C%20Bangladesh!5e0!3m2!1sen!2sus!4v1632957929899!5m2!1sen!2sus"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+        <!-- Request Assistance Form -->
+        <form id="request-form" action="https://formspree.io/f/xayzjqnl" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location" required>
+            
+            <label for="service">Service Needed</label>
+            <select id="service" name="service">
+                <option value="towing">Towing</option>
+                <option value="flat-tire">Flat Tire Assistance</option>
+                <option value="fuel">Fuel Delivery</option>
+                <option value="jumpstart">Jumpstart</option>
+                <option value="lockout">Lockout Assistance</option>
+            </select>
+            
+            <button type="submit">Request Help</button>
         </form>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 TruckMan. All Rights Reserved.</p>
+        <p>&copy; 2025 Roadside Assistance. All rights reserved.</p>
     </footer>
+
+    <!-- Tawk.to Live Chat Script -->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/your-widget-id/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    
+    <!-- Optional: Interactive Google Map (uncomment below for interactive map) -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_API_KEY&callback=initMap" async defer></script> -->
+    <!-- <script>
+        function initMap() {
+            const companyLocation = { lat: 23.8103, lng: 90.3984 }; // Replace with your location's coordinates
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 14,
+                center: companyLocation,
+            });
+            const marker = new google.maps.Marker({
+                position: companyLocation,
+                map: map,
+            });
+        }
+    </script> -->
+
 </body>
 </html>
